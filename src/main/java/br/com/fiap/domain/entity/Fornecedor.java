@@ -10,7 +10,7 @@ import java.util.Set;
 @Entity
 @Table(name = "TB_FORNECEDOR",
 uniqueConstraints = {
-        @UniqueConstraint(name = "UK_NOME_FORNECEDOR", columnNameas = "NOME_FORNECEDOR")
+        @UniqueConstraint(name = "UK_NOME_FORNECEDOR", columnNames = "NOME_FORNECEDOR")
 })
 public class Fornecedor
 {
@@ -30,6 +30,46 @@ public class Fornecedor
 
     @OneToMany(mappedBy = "fornecedor", cascade = CascadeType.ALL)
     private Set<Produtos> produtos = new LinkedHashSet<>();
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Set<Produtos> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(Set<Produtos> produtos) {
+        this.produtos = produtos;
+    }
 }
 
 
