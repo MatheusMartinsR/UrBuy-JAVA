@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package br.com.fiap;
 
 import br.com.fiap.domain.entity.Author;
@@ -54,3 +55,5 @@ public class Main {
 
 
 }
+=======
+>>>>>>> 789dcbcb5b5a7972dfedbdfe6258b9969fdc0162
