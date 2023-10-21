@@ -22,37 +22,6 @@ public class Main {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory( "oracle", getProperties() );
         EntityManager manager = factory.createEntityManager();
 
-        var holding = new PessoaJuridica();
-        var bene = new PessoaFisica();
-        var vinicius = new PessoaFisica();
-
-        holding.setCnpj( UUID.randomUUID().toString() )
-                .setId( null )
-                .setNome( "Holding Benezinho SA" )
-                .setNascimento( LocalDate.now().minusYears( 5 ) );
-
-        bene.setCpf(UUID.randomUUID().toString() )
-                .setId( null )
-                .setNome( "Benefrancis do Nascimento" )
-                .setNascimento( LocalDate.of( 1977, 3, 8 ) );
-
-        vinicius.setCpf( UUID.randomUUID().toString() )
-                .setId( null )
-                .setNome( "Vinicius Cruzeiro Barbosa" )
-                .setNascimento( LocalDate.now().minusYears( 17 ) );
-
-        var authorBene = new Author();
-        authorBene.setPessoa( bene );
-
-        var authorVinicius = new Author();
-        authorVinicius.setPessoa( vinicius );
-
-        var livro = new Book();
-        livro.setISBN( UUID.randomUUID().toString() )
-                .setName( "Memórias de Benezinho" )
-                .setLaunch( LocalDateTime.now() )
-                .addAuthor( authorBene )
-                .addAuthor( authorVinicius );
 
         manager.getTransaction().begin();
         manager.persist( holding );
