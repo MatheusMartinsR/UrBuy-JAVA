@@ -70,6 +70,17 @@ public class Fornecedor
     public void setProdutos(Set<Produtos> produtos) {
         this.produtos = produtos;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Fornecedor{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                ", produtos=" + produtos +
+                '}';
+    }
 }
 
 

@@ -2,7 +2,7 @@
 
 ![ LOGO DO PROJETO ](documentação/UrBuyLogo.jpeg)
 
-Responsável pelo projeto: Matheus Martins da Rocha - RM96505
+Responsável pelo projeto: Matheus Martins da Rocha - RM96505 Turma: 2TDSPT
 
 
 # Como rodar a aplicação: 
@@ -18,5 +18,5 @@ Responsável pelo projeto: Matheus Martins da Rocha - RM96505
 
 # Diagrama de classe:
 
-![ DIAGRAMA DE CLASSE ](documentação/DiagramaDeClasse.png)
+![ DIAGRAMA DE CLASSE ](documentação/Diagrama2.png)
 

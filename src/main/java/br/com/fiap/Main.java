@@ -1,59 +1,44 @@
-<<<<<<< HEAD
-package br.com.fiap;
-
-import br.com.fiap.domain.entity.Author;
-import br.com.fiap.domain.entity.Book;
-import br.com.fiap.domain.entity.PessoaFisica;
-import br.com.fiap.domain.entity.PessoaJuridica;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
+        // Criar um EntityManagerFactory para o banco de dados Oracle
+        EntityManagerFactory emfOracle = Persistence.createEntityManagerFactory("oracle");
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory( "oracle", getProperties() );
-        EntityManager manager = factory.createEntityManager();
+        // Obter um EntityManager para Oracle
+        EntityManager emOracle = emfOracle.createEntityManager();
 
+        try {
+            // Iniciar uma transação para Oracle
+            emOracle.getTransaction().begin();
 
-        manager.getTransaction().begin();
-        manager.persist( holding );
-        manager.persist( livro );
-        manager.getTransaction().commit();
-
-        System.out.println( holding );
-        System.out.println( livro );
-
-        manager.close();
-        factory.close();
-
-    }
-
-    private static Map<String, Object> getProperties() {
-        Map<String, String> env = System.getenv();
-        Map<String, Object> properties = new HashMap<>();
-
-        for (String chave : env.keySet()) {
-            if (chave.contains( "USER_FIAP" )) {
-                properties.put( "jakarta.persistence.jdbc.user",  env.get( chave ) );
+            // Exemplo: Consultar todos os fornecedores no banco de dados Oracle
+            List<Fornecedor> fornecedoresOracle = emOracle.createQuery("SELECT f FROM Fornecedor f", Fornecedor.class).getResultList();
+            for (Fornecedor fornecedor : fornecedoresOracle) {
+                System.out.println("Fornecedor Oracle: " + fornecedor.getNome());
             }
-            if (chave.contains( "PASSWORD_FIAP" )) {
-                properties.put( "jakarta.persistence.jdbc.password",  env.get( chave ) );
+
+            // Commitar a transação para Oracle
+            emOracle.getTransaction().commit();
+        } catch (Exception e) {
+            // Se ocorrer algum erro, fazer rollback da transação para Oracle
+            if (emOracle.getTransaction().isActive()) {
+                emOracle.getTransaction().rollback();
             }
-            // Outras configurações de propriedade ....
+            e.printStackTrace();
+        } finally {
+            // Fechar o EntityManager para Oracle
+            if (emOracle != null && emOracle.isOpen()) {
+                emOracle.close();
+            }
+            // Fechar o EntityManagerFactory para Oracle
+            if (emfOracle != null && emfOracle.isOpen()) {
+                emfOracle.close();
+            }
         }
-        return properties;
     }
-
-
 }
-=======
->>>>>>> 789dcbcb5b5a7972dfedbdfe6258b9969fdc0162

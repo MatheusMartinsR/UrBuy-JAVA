@@ -5,7 +5,8 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "TB_ENDERECO")
+@Table(name = "TB_PESSOA")
+@MappedSuperclass
 
 public abstract class Pessoa {
 
@@ -76,6 +77,18 @@ public abstract class Pessoa {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Pessoa{" +
+                "id=" + id +
+                ", logradouro='" + logradouro + '\'' +
+                ", numero=" + numero +
+                ", cep=" + cep +
+                ", cidade='" + cidade + '\'' +
+                ", pais='" + pais + '\'' +
+                '}';
     }
 }
 

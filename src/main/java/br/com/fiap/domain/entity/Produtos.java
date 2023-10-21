@@ -114,6 +114,21 @@ public class Produtos {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Produtos{" +
+                "id=" + id +
+                ", fornecedor=" + fornecedor +
+                ", nome='" + nome + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", preco=" + preco +
+                ", disponivel=" + disponivel +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
 }
 
 
