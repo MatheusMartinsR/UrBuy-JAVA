@@ -18,5 +18,5 @@ Responsável pelo projeto: Matheus Martins da Rocha - RM96505 Turma: 2TDSPT
 
 # Diagrama de classe:
 
-![ DIAGRAMA DE CLASSE ](documentação/Diagrama2.png)
+![ DIAGRAMA DE CLASSE ](documentação/DIAGRAMA%20(2).png)
 
