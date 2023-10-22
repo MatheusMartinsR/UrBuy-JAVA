@@ -19,7 +19,7 @@ public class Produtos {
     private Long id;
 
     @ManyToOne
-    @Column(name = "ID_FORNECEDOR", nullable = false)
+    @JoinColumn(name = "ID_FORNECEDOR", nullable = false)
     private Fornecedor fornecedor;
 
     @Column(name = "NOME_PRODUTO", nullable = false)

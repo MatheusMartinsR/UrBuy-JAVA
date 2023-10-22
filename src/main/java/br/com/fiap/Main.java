@@ -1,44 +1,51 @@
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import java.util.List;
+package br.com.fiap;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+import java.time.LocalDateTime;
+
+import br.com.fiap.domain.entity.DataDeCompra;
+import br.com.fiap.domain.entity.Fornecedor;
+import br.com.fiap.domain.entity.Produtos;
+import br.com.fiap.domain.entity.Usuario;
+
 
 public class Main {
-
     public static void main(String[] args) {
-        // Criar um EntityManagerFactory para o banco de dados Oracle
-        EntityManagerFactory emfOracle = Persistence.createEntityManagerFactory("oracle");
+        // Configuração do EntityManagerFactory
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracle");
+        EntityManager em = emf.createEntityManager();
 
-        // Obter um EntityManager para Oracle
-        EntityManager emOracle = emfOracle.createEntityManager();
+        // Criando instâncias das entidades
+        Fornecedor fornecedor = new Fornecedor();
+        fornecedor.setNome("Nome do Fornecedor");
+        // ... outras configurações do fornecedor
 
-        try {
-            // Iniciar uma transação para Oracle
-            emOracle.getTransaction().begin();
+        Produtos produto = new Produtos();
+        produto.setNome("Nome do Produto");
+        produto.setFornecedor(fornecedor);
+        // ... outras configurações do produto
 
-            // Exemplo: Consultar todos os fornecedores no banco de dados Oracle
-            List<Fornecedor> fornecedoresOracle = emOracle.createQuery("SELECT f FROM Fornecedor f", Fornecedor.class).getResultList();
-            for (Fornecedor fornecedor : fornecedoresOracle) {
-                System.out.println("Fornecedor Oracle: " + fornecedor.getNome());
-            }
+        Usuario usuario = new Usuario();
+        usuario.setNome("Nome do Usuário");
+        // ... outras configurações do usuário
 
-            // Commitar a transação para Oracle
-            emOracle.getTransaction().commit();
-        } catch (Exception e) {
-            // Se ocorrer algum erro, fazer rollback da transação para Oracle
-            if (emOracle.getTransaction().isActive()) {
-                emOracle.getTransaction().rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            // Fechar o EntityManager para Oracle
-            if (emOracle != null && emOracle.isOpen()) {
-                emOracle.close();
-            }
-            // Fechar o EntityManagerFactory para Oracle
-            if (emfOracle != null && emfOracle.isOpen()) {
-                emfOracle.close();
-            }
-        }
+        DataDeCompra compra = new DataDeCompra();
+        compra.setUsuario(usuario);
+        compra.setProduto(produto);
+        compra.setDataCompra(LocalDateTime.now());
+
+        // Iniciando a transação e persistindo os dados
+        em.getTransaction().begin();
+        em.persist(fornecedor);
+        em.persist(produto);
+        em.persist(usuario);
+        em.persist(compra);
+        em.getTransaction().commit();
+
+        // Fechando o EntityManager e o EntityManagerFactory
+        em.close();
+        emf.close();
     }
 }

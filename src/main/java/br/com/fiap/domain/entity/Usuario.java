@@ -1,4 +1,4 @@
-package br.com.fiap.petshop.domain.entity.animal;
+package br.com.fiap.domain.entity;
 
 
 

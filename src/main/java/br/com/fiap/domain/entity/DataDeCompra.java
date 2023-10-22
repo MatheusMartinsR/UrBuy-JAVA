@@ -1,11 +1,16 @@
-package br.com.fiap.petshop.domain.entity;
+package br.com.fiap.domain.entity;
 
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+
 @Entity
-@Table(name = "TB_DataDeCompra")
+@Table(name = "TB_DataDeCompra",
+uniqueConstraints = {
+        @UniqueConstraint(name = "UK_DATA_COMPRA", columnNames = "DATA_COMPRA")
+})
 
 public class DataDeCompra {
 
@@ -19,7 +24,7 @@ public class DataDeCompra {
     private Usuario usuario;
 
     @ManyToOne
-    @JoinColum(name = "ID_PRODUTO", nullable = false)
+    @JoinColumn(name = "ID_PRODUTO", nullable = false)
     private Produtos produto;
 
     @Column(name = "DATA_COMPRA")
