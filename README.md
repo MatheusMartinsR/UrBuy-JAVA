@@ -2,7 +2,7 @@
 
 ![ LOGO DO PROJETO ](documentação/UrBuyLogo.jpeg)
 
-Responsável pelo projeto: Matheus Martins da Rocha - RM96505 Turma: 2TDSPT
+Responsável pelo projeto de JPA: Matheus Martins da Rocha - RM96505 Turma: 2TDSPT
 
 
 # Como rodar a aplicação: 
