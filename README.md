@@ -2,7 +2,12 @@
 
 ![ LOGO DO PROJETO ](documentação/UrBuyLogo.jpeg)
 
-Responsável pelo projeto de JPA: Matheus Martins da Rocha - RM96505 Turma: 2TDSPT
+# Breve apresentação do grupo: 
+* Matheus Martins da Rocha - RM96505 Turma: 2TDSPT(responsável pela entrega de Enterprise APPLICATION DEVELOPMENT)
+* Guilherme Raul Varella - RM97166 Turma: 2TDSPT (responsável pela entrega de Compliance e Quality Assurance e DevOps Tools e Cloud Computing)
+* Pedro Fontanez Bravo - RM97366 Turma: 2TDSPT (responsável pela entrega de Disruptive Architectures IT, IoB e IA)
+* Felipe Rios Miranda - RM96726 Turma 2TDSPT (responsável pela entrega de DataBase Application e Data Science)]
+* Augusto de Carvalho Vertolis Santana - RM96518 Turma 2TDSPT (responsável pela entrega de Hybrid Mobile App Development e Digital Business Enablement)
 
 
 # Como rodar a aplicação: 
