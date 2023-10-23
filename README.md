@@ -21,7 +21,7 @@ Responsável pelo projeto de JPA: Matheus Martins da Rocha - RM96505 Turma: 2TDS
 ![ DIAGRAMA DE CLASSE ](documentação/DIAGRAMA%20(2).png)
 
 
-# MODELO MER:
+# MODELO DER:
 
 ![ MODELO_DER ](documentação/ModeloMER.png)
 
