@@ -28,26 +28,26 @@ Responsável pelo projeto de JPA: Matheus Martins da Rocha - RM96505 Turma: 2TDS
  # Breve explicação do modelo: 
 Tabela tb_usuario:
 
-Chave Primária: id_usuario
+* Chave Primária: id_usuario
 Relacionamento com tb_endereco: 1 usuário para N endereços (via id_usuario na tabela tb_endereco)
 
 Tabela tb_endereco:
 
-Chave Primária: id_endereco
+* Chave Primária: id_endereco
 Chave Estrangeira: id_usuario referenciando tb_usuario.id_usuario
 
 Tabela tb_fornecedor:
 
-Chave Primária: id_fornecedor
+* Chave Primária: id_fornecedor
 
 Tabela tb_produtos:
 
-Chave Primária: id_produto
+* Chave Primária: id_produto
 Chave Estrangeira: id_fornecedor referenciando tb_fornecedor.id_fornecedor
 
 Tabela tb_datadecompra:
 
-Chave Primária: id_compra
+* Chave Primária: id_compra
 Chaves Estrangeiras: id_usuario referenciando tb_usuario.id_usuario, id_produto referenciando tb_produtos.id_produto
 
 # Link do vídeo de apresentação:
