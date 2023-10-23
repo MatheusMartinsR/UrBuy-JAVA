@@ -46,5 +46,7 @@ Tabela tb_datadecompra:
 Chave Primária: id_compra
 Chaves Estrangeiras: id_usuario referenciando tb_usuario.id_usuario, id_produto referenciando tb_produtos.id_produto
 
+# Link do vídeo de apresentação:
 
+link : https://www.youtube.com/watch?v=kGQI-uOhQRM
 
