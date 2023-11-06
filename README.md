@@ -23,12 +23,12 @@
 
 # Diagrama de classe:
 
-![ DIAGRAMA DE CLASSE ](documentação/DIAGRAMA%20(2).png)
+![ DIAGRAMA DE CLASSE ](documentação/DiagramaClasse.png)
 
 
 # MODELO DER:
 
-![ MODELO_DER ](documentação/ModeloMER.png)
+![ MODELO_DER ](documentação/Logical.png)
 
 # Link do vídeo de apresentação:
 
