@@ -5,11 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "TB_PESSOA",
-uniqueConstraints = {
-        @UniqueConstraint(name = "UK_LOGRADOURO", columnNames = "LOGRADOURO")
-})
-@MappedSuperclass
+@Table(name = "TB_PESSOA")
 
 public abstract class Pessoa {
 

@@ -2,15 +2,13 @@ package br.com.fiap.domain.entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "TB_FORNECEDOR",
 uniqueConstraints = {
-        @UniqueConstraint(name = "UK_NOME_FORNECEDOR", columnNames = "NOME_FORNECEDOR")
+        @UniqueConstraint(name = "UK_EMAIL_FORNECEDOR", columnNames = "EMAIL_FORNECEDOR")
 })
 public class Fornecedor
 {
@@ -29,7 +27,7 @@ public class Fornecedor
     private String senha;
 
     @OneToMany(mappedBy = "fornecedor", cascade = CascadeType.ALL)
-    private Set<Produtos> produtos = new LinkedHashSet<>();
+    private Set<Produto> produtos = new LinkedHashSet<>();
 
     public Long getId() {
         return id;
@@ -63,11 +61,11 @@ public class Fornecedor
         this.senha = senha;
     }
 
-    public Set<Produtos> getProdutos() {
+    public Set<Produto> getProdutos() {
         return produtos;
     }
 
-    public void setProdutos(Set<Produtos> produtos) {
+    public void setProdutos(Set<Produto> produtos) {
         this.produtos = produtos;
     }
 

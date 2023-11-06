@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 import br.com.fiap.domain.entity.DataDeCompra;
 import br.com.fiap.domain.entity.Fornecedor;
-import br.com.fiap.domain.entity.Produtos;
+import br.com.fiap.domain.entity.Produto;
 import br.com.fiap.domain.entity.Usuario;
 
 
@@ -22,7 +22,7 @@ public class Main {
         fornecedor.setNome("Nome do Fornecedor");
 
 
-        Produtos produto = new Produtos();
+        Produto produto = new Produto();
         produto.setNome("Nome do Produto");
         produto.setFornecedor(fornecedor);
 

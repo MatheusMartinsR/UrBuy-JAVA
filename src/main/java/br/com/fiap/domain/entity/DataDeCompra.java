@@ -3,14 +3,11 @@ package br.com.fiap.domain.entity;
 
 
 import jakarta.persistence.*;
-import java.io.Serializable;
+
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "TB_DataDeCompra",
-uniqueConstraints = {
-        @UniqueConstraint(name = "UK_DATA_COMPRA", columnNames = "DATA_COMPRA")
-})
+@Table(name = "TB_DataDeCompra")
 
 public class DataDeCompra {
 
@@ -25,7 +22,7 @@ public class DataDeCompra {
 
     @ManyToOne
     @JoinColumn(name = "ID_PRODUTO", nullable = false)
-    private Produtos produto;
+    private Produto produto;
 
     @Column(name = "DATA_COMPRA")
     private LocalDateTime dataCompra;
@@ -48,11 +45,11 @@ public class DataDeCompra {
         return this;
     }
 
-    public Produtos getProduto() {
+    public Produto getProduto() {
         return produto;
     }
 
-    public DataDeCompra setProduto(Produtos produto) {
+    public DataDeCompra setProduto(Produto produto) {
         this.produto = produto;
         return this;
     }

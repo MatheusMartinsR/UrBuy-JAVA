@@ -2,17 +2,12 @@ package br.com.fiap.domain.entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @Entity
 @Table(name = "TB_PRODUTOS",
 uniqueConstraints = {
         @UniqueConstraint(name = "UK_NOME_PRODUTO", columnNames = "NOME_PRODUTO")
 })
-public class Produtos {
+public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PRODUTOS")
     @Column(name = "ID_PRODUTO")

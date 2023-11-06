@@ -1,20 +1,12 @@
 {
   "name": "urbuy-java",
   "version": "1.0.0",
-  "description": "Códigos para uso da criação do projeto UrBuy em JPA",
+  "description": "![ LOGO DO PROJETO ](documentação/UrBuyLogo.jpeg)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MatheusMartinsR/UrBuy-JAVA.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MatheusMartinsR/UrBuy-JAVA/issues"
-  },
-  "homepage": "https://github.com/MatheusMartinsR/UrBuy-JAVA#readme"
+  "license": "ISC"
 }
