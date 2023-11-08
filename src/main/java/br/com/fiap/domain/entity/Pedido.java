@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class Pedido {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PEDIDO")
     @Column(name = "ID_PEDIDO")
     private Long id;
 

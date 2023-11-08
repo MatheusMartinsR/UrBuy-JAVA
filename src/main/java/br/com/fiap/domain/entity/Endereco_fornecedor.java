@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class Endereco_fornecedor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_FORNECEDOR")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_ENDERECO_FORNECEDOR")
     @Column(name = "ID_ENDERECO_FORNECEDOR")
     private Long id;
 

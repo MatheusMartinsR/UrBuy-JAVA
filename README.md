@@ -28,7 +28,7 @@
 
 # MODELO DER:
 
-![ MODELO_DER ](documentação/Logical.png)
+![ MODELO_DER ](documentação/LOGICO.png)
 
 # Link do vídeo de apresentação:
 

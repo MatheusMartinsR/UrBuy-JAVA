@@ -9,7 +9,7 @@ uniqueConstraints = {
 })
 public class Produto {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PRODUTOS")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PRODUTO")
     @Column(name = "ID_PRODUTO")
     private Long id;
 
