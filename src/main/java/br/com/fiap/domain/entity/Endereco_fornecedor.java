@@ -2,13 +2,10 @@ package br.com.fiap.domain.entity;
 
 import jakarta.persistence.*;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @Entity
 @Table(name = "TB_ENDERECO_FORNECEDOR")
 
-public class ENDERECO_FORNECEDOR {
+public class Endereco_fornecedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_FORNECEDOR")
@@ -32,7 +29,7 @@ public class ENDERECO_FORNECEDOR {
         return id;
     }
 
-    public ENDERECO_FORNECEDOR setId(Long id) {
+    public Endereco_fornecedor setId(Long id) {
         this.id = id;
         return this;
     }
@@ -41,7 +38,7 @@ public class ENDERECO_FORNECEDOR {
         return logradouro;
     }
 
-    public ENDERECO_FORNECEDOR setLogradouro(String logradouro) {
+    public Endereco_fornecedor setLogradouro(String logradouro) {
         this.logradouro = logradouro;
         return this;
     }
@@ -50,7 +47,7 @@ public class ENDERECO_FORNECEDOR {
         return numero;
     }
 
-    public ENDERECO_FORNECEDOR setNumero(String numero) {
+    public Endereco_fornecedor setNumero(String numero) {
         this.numero = numero;
         return this;
     }
@@ -59,7 +56,7 @@ public class ENDERECO_FORNECEDOR {
         return cep;
     }
 
-    public ENDERECO_FORNECEDOR setCep(String cep) {
+    public Endereco_fornecedor setCep(String cep) {
         this.cep = cep;
         return this;
     }
@@ -68,7 +65,7 @@ public class ENDERECO_FORNECEDOR {
         return fornecedor;
     }
 
-    public ENDERECO_FORNECEDOR setFornecedor(Fornecedor fornecedor) {
+    public Endereco_fornecedor setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
         return this;
     }
