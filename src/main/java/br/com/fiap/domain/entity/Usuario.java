@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -44,7 +45,11 @@ public class Usuario {
     private String tipo;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private Set<DataDeCompra> compras = new LinkedHashSet<>();
+    private List<Endereco> enderecos;
+
+
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private Set<ItemDeCompra> compras = new LinkedHashSet<>();
 
     public Long getId() {
         return id;

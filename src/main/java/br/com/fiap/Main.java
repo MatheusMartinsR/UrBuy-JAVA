@@ -5,11 +5,9 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import java.time.LocalDateTime;
 
-import br.com.fiap.domain.entity.DataDeCompra;
-import br.com.fiap.domain.entity.Fornecedor;
+import br.com.fiap.domain.entity.ItemDeCompra;
 import br.com.fiap.domain.entity.Produto;
 import br.com.fiap.domain.entity.Usuario;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -18,30 +16,22 @@ public class Main {
         EntityManager em = emf.createEntityManager();
 
 
-        Fornecedor fornecedor = new Fornecedor();
-        fornecedor.setNome("Nome do Fornecedor");
-
-
-        Produto produto = new Produto();
-        produto.setNome("Nome do Produto");
-        produto.setFornecedor(fornecedor);
-
-
         Usuario usuario = new Usuario();
         usuario.setNome("Nome do Usuário");
 
+        Produto produto = new Produto();
+        produto.setNome("Nome do Produto");
 
-        DataDeCompra compra = new DataDeCompra();
-        compra.setUsuario(usuario);
-        compra.setProduto(produto);
-        compra.setDataCompra(LocalDateTime.now());
+        ItemDeCompra itemDeCompra = new ItemDeCompra();
+        itemDeCompra.setUsuario(usuario);
+        itemDeCompra.setProduto(produto);
+        itemDeCompra.setItem("Item de Compra");
 
 
         em.getTransaction().begin();
-        em.persist(fornecedor);
-        em.persist(produto);
         em.persist(usuario);
-        em.persist(compra);
+        em.persist(produto);
+        em.persist(itemDeCompra);
         em.getTransaction().commit();
 
 
