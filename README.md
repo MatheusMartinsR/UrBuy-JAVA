@@ -12,14 +12,31 @@
 
 # Como rodar a aplicação: 
 
-1. Configurar o Arquivo de Configuração:
-   Primeiro, você precisa configurar um arquivo chamado persistence.xml. Este arquivo contém informações importantes, como qual banco de dados usar, onde encontrar suas classes de dados, entre outras configurações. É basicamente como você diz ao Java como se conectar ao banco de dados.
+Abra o Projeto no Seu IDE:
 
-2. Criar sua Classe de Dados:
-   Você terá uma classe especial que apresenta os dados que você deseja armazenar no banco de dados. Por exemplo, se você estiver criando um aplicativo de gerenciamento de usuarios, sua classe poderia representar um Usuario , com campos como nome, e-mail, etc.
+* Inicie o seu Ambiente de Desenvolvimento Integrado (IDE) favorito.
+Importe o projeto para o IDE, selecionando a opção de importação ou abertura de projeto, dependendo das funcionalidades do seu IDE.
+Navegue até a Classe Main:
 
-4. Executar e Testar:
-   Depois de configurar tudo, você pode rodar seu programa Java. Ele vai começar a conectar com o banco de dados usando as configurações que você definiu, e você poderá ver as operações de banco de dados acontecendo, como adicionar ou buscar dados.   
+* No seu IDE, vá até a pasta src/main/java/br.com.fiap.
+Dentro dessa pasta, você encontrará a classe principal chamada Main.java. Abra esta classe para explorar o código-fonte.
+Acesse o Arquivo persistence.xml para Configurar o Banco de Dados:
+
+* Vá até a pasta src/main/resources/META-INF.
+Dentro dessa pasta, abra o arquivo persistence.xml para configurar as propriedades de acesso ao banco de dados. Aqui, você pode ajustar o nome de usuário, senha e outras configurações necessárias para o seu banco de dados Oracle.
+
+    Por exemplo:
+![EXEMPLO_PERSISTENCE](documentação/PERSISC.jpeg)
+
+* Dentro da classe Main.java, certifique-se de que a constante PERSISTENCE_UNIT esteja definida corretamente para o nome do seu persistenceUnit.
+  Por exemplo
+![EXEMPLO_MAIN](documentação/main.jpeg)
+
+# Executar e Testar a Aplicação:
+
+* No arquivo Main.java, você encontrará um método main. Este é o ponto de entrada da aplicação.
+Clique com o botão direito do mouse no arquivo Main.java e escolha a opção "Run" para executar a aplicação. Alternativamente, procure na parte superior da tela um ícone de "play" para iniciar a execução.
+Esses passos devem ajudar a executar e testar a aplicação localmente em seu ambiente de desenvolvimento. Certifique-se de que o banco dados está disponível e que as configurações do persistence.xml estejam corretas.
 
 # Diagrama de classe:
 
