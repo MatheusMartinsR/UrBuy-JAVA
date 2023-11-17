@@ -3,10 +3,10 @@
 ![ LOGO DO PROJETO ](documentação/UrBuyLogo.jpeg)
 
 # Breve apresentação do grupo: 
-* Matheus Martins da Rocha - RM96505 Turma: 2TDSPT(responsável pela entrega de Enterprise APPLICATION DEVELOPMENT)
-* Guilherme Raul Varella - RM97166 Turma: 2TDSPT (responsável pela entrega de Compliance e Quality Assurance e DevOps Tools e Cloud Computing)
+* Matheus Martins da Rocha - RM96505 Turma: 2TDSPT(responsável pela entrega de Enterprise APPLICATION DEVELOPMENT e DataBase Application e Data Science)
+* Guilherme Raul Varella - RM97166 Turma: 2TDSPT (responsável pela entrega de DevOps Tools e Cloud Computing)
 * Pedro Fontanez Bravo - RM97366 Turma: 2TDSPT (responsável pela entrega de Disruptive Architectures IT, IoB e IA)
-* Felipe Rios Miranda - RM96726 Turma 2TDSPT (responsável pela entrega de DataBase Application e Data Science)]
+* Felipe Rios Miranda - RM96726 Turma 2TDSPT (responsável pela entrega de Compliance e Quality Assurance )]
 * Augusto de Carvalho Vertolis Santana - RM96518 Turma 2TDSPT (responsável pela entrega de Hybrid Mobile App Development e Digital Business Enablement)
 
 
@@ -45,7 +45,7 @@ Esses passos devem ajudar a executar e testar a aplicação localmente em seu am
 
 # MODELO DER:
 
-![ MODELO_DER ](documentação/LOGICO.png)
+![ MODELO_DER ](documentação/LOGICAL_JPA.png)
 
 # Link do vídeo de apresentação:
 

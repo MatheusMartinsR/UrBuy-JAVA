@@ -4,7 +4,7 @@ package br.com.fiap.domain.entity;
 import jakarta.persistence.*;
 import org.checkerframework.checker.units.qual.C;
 
-//https://github.com/google/gson/issues/2485
+
 @Entity
 @Table(name = "TB_ENDERECO")
 
