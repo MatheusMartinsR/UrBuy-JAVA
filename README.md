@@ -40,7 +40,7 @@ Esses passos devem ajudar a executar e testar a aplicação localmente em seu am
 
 # Diagrama de classe:
 
-![ DIAGRAMA DE CLASSE ](documentação/DiagramaClasse.png)
+![ DIAGRAMA DE CLASSE ](documentação/whiteboard.png)
 
 
 # MODELO DER:
@@ -50,4 +50,6 @@ Esses passos devem ajudar a executar e testar a aplicação localmente em seu am
 # Link do vídeo de apresentação:
 
 link : https://www.youtube.com/watch?v=kGQI-uOhQRM
+
+![ LOGO DO PROJETO ](documentação/UrBuyLogo.jpeg)
 
