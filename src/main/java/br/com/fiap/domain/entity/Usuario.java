@@ -1,20 +1,14 @@
 package br.com.fiap.domain.entity;
 
-
-
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "TB_USUARIO",
-uniqueConstraints = {
-        @UniqueConstraint(name = "UK_EMAIL_USUARIO", columnNames = "EMAIL_USUARIO")
-})
+        uniqueConstraints = {
+                @UniqueConstraint(name = "UK_EMAIL_USUARIO", columnNames = "EMAIL_USUARIO")
+        })
 
 public class Usuario {
 
@@ -47,9 +41,25 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Endereco> enderecos;
 
-
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private Set<ItemDeCompra> compras = new LinkedHashSet<>();
+
+    // Adicione um construtor para inicializar as listas
+    public Usuario() {
+        this.enderecos = new ArrayList<>();
+        // Inicialize outras listas ou conjuntos, se houver
+    }
+
+    // Restante do código
+
+    public void adicionarEndereco(Endereco endereco) {
+        if (enderecos == null) {
+            // Inicializa a lista se ainda não foi feito
+            enderecos = new ArrayList<>();
+        }
+        enderecos.add(endereco);
+        endereco.setUsuario(this);
+    }
 
     public Long getId() {
         return id;
@@ -123,8 +133,8 @@ public class Usuario {
         return this;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "Usuario{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +

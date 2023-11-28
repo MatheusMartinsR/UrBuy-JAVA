@@ -24,7 +24,7 @@ public class Endereco {
     private String cep;
 
     @ManyToOne
-    @JoinColumn(name = "ID_USUARIO", nullable = false) // nome da coluna na tabela TB_ENDERECO
+    @JoinColumn(name = "ID_USUARIO", nullable = true) // nome da coluna na tabela TB_ENDERECO
     private Usuario usuario;
 
 
@@ -73,6 +73,15 @@ public class Endereco {
                 ", numero='" + numero + '\'' +
                 ", cep='" + cep + '\'' +
                 '}';
+    }
+
+    public void setUsuario(Usuario usuario) {
+        if (this.usuario == null || this.usuario != usuario) {
+            this.usuario = usuario;
+            if (usuario != null) {
+                usuario.adicionarEndereco(this);
+            }
+        }
     }
 }
 
