@@ -6,7 +6,10 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "TB_FORNECEDOR")
+@Table(name = "TB_FORNECEDOR",
+ uniqueConstraints = {
+        @UniqueConstraint(name = "UK_EMAIL_FORNECEDOR", columnNames = "EMAIL_FORNECEDOR")
+})
 public class Fornecedor
 {
     @Id
