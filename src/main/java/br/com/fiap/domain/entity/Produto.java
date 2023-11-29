@@ -3,7 +3,7 @@ package br.com.fiap.domain.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "TB_PRODUTOS",
+@Table(name = "TB_PRODUTO",
 uniqueConstraints = {
         @UniqueConstraint(name = "UK_NOME_PRODUTO", columnNames = "NOME_PRODUTO")
 })

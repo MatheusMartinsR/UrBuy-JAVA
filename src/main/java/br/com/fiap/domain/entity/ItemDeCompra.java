@@ -10,7 +10,7 @@ import jakarta.persistence.*;
 public class ItemDeCompra {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_DATA_COMPRA")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_ITEM_COMPRA")
     @Column(name = "ID_COMPRA")
     private Long id;
 

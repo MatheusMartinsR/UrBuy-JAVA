@@ -36,7 +36,7 @@ public class Main {
             endereco.setNumero("123");
             endereco.setCep("12345-678");
 
-            // Adiciona o endereço ao usuário
+
             endereco.setUsuario(usuario);
 
             em.getTransaction().begin();
