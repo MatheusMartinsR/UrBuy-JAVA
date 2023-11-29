@@ -40,7 +40,7 @@ Esses passos devem ajudar a executar e testar a aplicação localmente em seu am
 
 # Diagrama de classe:
 
-![ DIAGRAMA DE CLASSE ](documentação/whiteboard.png)
+![ DIAGRAMA DE CLASSE ](documentação/astah_urbuy.png)
 
 
 # MODELO DER:
