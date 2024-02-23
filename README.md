@@ -10,37 +10,19 @@
 * Augusto de Carvalho Vertolis Santana - RM96518 Turma 2TDSPT (responsável pela entrega de Hybrid Mobile App Development e Digital Business Enablement)
 
 
-# Como rodar a aplicação: 
+# Objetivo do projeto: 
 
-Abra o Projeto no Seu IDE:
+No mundo cada vez mais complexo do mercado tecnológico, encontrar produtos adequados às necessidades específicas tornou-se um desafio significativo. Nesse contexto, apresentamos nossa proposta tecnológica revolucionária: um sistema de busca personalizado alimentado por um algoritmo inteligente. Esta aplicação visa transformar a experiência de compra de profissionais e entusiastas do setor de tecnologia, simplificando o processo de seleção e economizando tempo valioso.
 
-* Inicie o seu Ambiente de Desenvolvimento Integrado (IDE) favorito.
-Importe o projeto para o IDE, selecionando a opção de importação ou abertura de projeto, dependendo das funcionalidades do seu IDE.
-Navegue até a Classe Main:
+# Protótipo funcional da aplicação:
 
-* No seu IDE, vá até a pasta src/main/java/br.com.fiap.
-Dentro dessa pasta, você encontrará a classe principal chamada Main.java. Abra esta classe para explorar o código-fonte.
-Acesse o Arquivo persistence.xml para Configurar o Banco de Dados:
+# Principal funcionalidade do sistema: 
 
-* Vá até a pasta src/main/resources/META-INF.
-Dentro dessa pasta, abra o arquivo persistence.xml para configurar as propriedades de acesso ao banco de dados. Aqui, você pode ajustar o nome de usuário, senha e outras configurações necessárias para o seu banco de dados Oracle.
-
-    Por exemplo:
-![EXEMPLO_PERSISTENCE](documentação/PERSISC.jpeg)
-
-* Dentro da classe Main.java, certifique-se de que a constante PERSISTENCE_UNIT esteja definida corretamente para o nome do seu persistenceUnit.
-  Por exemplo
-![EXEMPLO_MAIN](documentação/main.jpeg)
-
-# Executar e Testar a Aplicação:
-
-* No arquivo Main.java, você encontrará um método main. Este é o ponto de entrada da aplicação.
-Clique com o botão direito do mouse no arquivo Main.java e escolha a opção "Run" para executar a aplicação. Alternativamente, procure na parte superior da tela um ícone de "play" para iniciar a execução.
-Esses passos devem ajudar a executar e testar a aplicação localmente em seu ambiente de desenvolvimento. Certifique-se de que o banco dados está disponível e que as configurações do persistence.xml estejam corretas.
+Nossa aplicação inovadora utiliza um formulário de busca personalizado para ajudar os usuários a encontrarem os produtos mais relevantes em tempo real. Com base nas informações fornecidas, nosso algoritmo inteligente analisa vastas opções disponíveis no mercado tecnológico, apresentando as escolhas mais adequadas de forma instantânea. Essa abordagem centrada no cliente não apenas lista produtos, mas também oferece uma jornada de compra mais inteligente e eficiente.
 
 # Diagrama de classe:
 
-![ DIAGRAMA DE CLASSE ](documentação/astah_urbuy.png)
+
 
 
 # MODELO DER:
