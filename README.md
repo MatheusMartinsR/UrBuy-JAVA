@@ -15,7 +15,7 @@
 No mundo cada vez mais complexo do mercado tecnológico, encontrar produtos adequados às necessidades específicas tornou-se um desafio significativo. Nesse contexto, apresentamos nossa proposta tecnológica revolucionária: um sistema de busca personalizado alimentado por um algoritmo inteligente. Esta aplicação visa transformar a experiência de compra de profissionais e entusiastas do setor de tecnologia, simplificando o processo de seleção e economizando tempo valioso.
 
 # Protótipo funcional da aplicação:
-![ PROTÓTIPO ](documentação/ARQsoft.jpg)
+![ PROTÓTIPO ](documentação/Arquitetura.png)
 
 # Principal funcionalidade do sistema: 
 
